@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Color Names</title>
+</head>
+<body>
+    <h2 >Color Name Page</h2>
+	<a class="color_text" href="add" style="float: none"> Add More </a><br >
+	<a class="color_text" href="download" style="float: none"> Download </a>
+    <table>
+        {% for row in names %}
+			
+        <tr>
+			<td><span class="color_text" style="color:rgb( {{ row[3]}}, {{row[4]}}, {{row[5]}})">{{ row[1] }}</span> </td>
+			<td><div class="color_div" style="background-color:rgb( {{ row[3] }}, {{row[4]}}, {{row[5]}} ); width: 50px;height: 20px;"></div></td>
+			<td><span class="color_text">{{ row[2] }}</span> </td>
+			<td><a class="color_text" href="delete?id={{row[0]}}"> Delete </a></td>
+		</tr>
+		{% endfor %}
+    </table>
+    <br /><br />
+</body>
+</html>
