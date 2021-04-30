@@ -107,3 +107,6 @@ def download():
     response.headers['Content-Disposition'] = "attachment; filename=colors.csv"
     conn.close();
     return response;
+
+if __name__ == '__main__':
+    app.run()
